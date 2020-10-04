@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "description": "MPEG transport stream library for Node.js.",
   "main": "index.js",
+  "private": false,
   "scripts": {
     "test": "tape test/*Spec.js",
     "lint": "eslint **/*.js",
