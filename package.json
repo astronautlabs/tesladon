@@ -1,5 +1,5 @@
 {
-  "name": "tesladon",
+  "name": "@astronautlabs/tesladon",
   "version": "0.1.1",
   "description": "MPEG transport stream library for Node.js.",
   "main": "index.js",
@@ -10,19 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Streampunk/tesladon.git"
+    "url": "git+https://github.com/astronautlabs/tesladon.git"
   },
   "keywords": [
     "MPEG-TS",
     "transport stream",
     "ts"
   ],
-  "author": "Streampunk Media <furnace@streampunk.media> (http://www.streampunk.media)",
+  "author": "Streampunk Media & Astronaut Labs",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Streampunk/tesladon/issues"
+    "url": "https://github.com/astronautlabs/tesladon/issues"
   },
-  "homepage": "https://github.com/Streampunk/tesladon#readme",
+  "homepage": "https://github.com/astronautlabs/tesladon#readme",
   "dependencies": {
     "highland": "^2.13.0",
     "yargs": "^11.0.0"

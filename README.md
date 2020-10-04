@@ -1,5 +1,11 @@
 [![CircleCI](https://circleci.com/gh/Streampunk/tesladon.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/Streampunk/tesladon)
-# tesladon
+# @/tesladon
+
+> This is Astronaut Labs' master branch of Streampunk's [tesladon](https://github.com/Streampunk/tesladon/pull/4) package which implements MPEG transport streams in Javascript.
+> It serves as an integration branch of all of our pending improvements to the library as well as 
+> any changes that are rejected by upstream that we wish to continue using. For individual 
+> improvements which we are contributing upstream, see the `fix/*` and `feature/*` branches of 
+> this repository.
 
 [MPEG transport stream](https://en.wikipedia.org/wiki/MPEG_transport_stream) library for [Node.js](http://nodejs.org/). Uses the [highland](http://highlandjs.org/) reactive streams library to provide a set of mappings between binary transport stream packets to and from Javascript objects with embedded Buffer payloads.
 
@@ -11,11 +17,11 @@ The writing process is effectively the reverse. The user creates a stream of Jav
 
 Tesladon is a library that is designed to be used within other projects. To use the library within your project, in the project's root directory:
 
-    npm install --save tesladon
+    npm install --save @astronautlabs/tesladon
 
 Alternatively, you can use tesladon as a transport stream dumper via a global install and the `tesladump` application.
 
-    npm install -g tesladon
+    npm install -g @astronautlabs/tesladon
 
 Users or Mac or Linux platforms may need to prepend `sudo` to the above.
 
@@ -26,7 +32,7 @@ Users or Mac or Linux platforms may need to prepend `sudo` to the above.
 Here is an example of using tesladon to dump a transport stream as a stream JSON objects representing PAT, PMT and PES packets.
 
 ```javascript
-var tesladon = require('tesladon');
+var tesladon = require('@astronautlabs/tesladon');
 var H = require('highland');
 var fs = require('fs');
 
@@ -51,7 +57,7 @@ Tesladon can take a stream of Javascript objects representing a mixture of PES s
 The following contrived example shows how tesladon could be used to write a transport stream to a file:
 
 ```javascript
-var tesladon = require('tesladon');
+var tesladon = require('@astronautlabs/tesladon');
 var H = require('highland');
 var fs = require('fs');
 
@@ -135,7 +141,7 @@ Finished dumping MPEG transport stream data.
 A mapping is defined between MPEG-TS timestamps (PTS and DTS in PES packets) and PTP time for _relative_ time mapping purposes only. The aim is that given any TS timestamp, it is possible to create a PTP timestamp and take this PTP timestamp and get back exactly the same TS timestamp. It is also possible to take a PTP timestamp from co-timed PTP sources and make consistent relative TS timestamp. Care needs to be taken near to the day boundary (Unix epoch, no leap seconds, 2**33 90Hz units per day) as the timestamp will wrap back to zero.
 
 ```javascript
-var tesladon = require('tesladon');
+var tesladon = require('@astronautlabs/tesladon');
 var pts = 2964452213;
 
 // Convert to PTP timestamp
