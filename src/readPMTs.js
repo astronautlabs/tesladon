@@ -19,15 +19,38 @@ const util = require('./util.js');
 
 function genny () {
   var push = null;
-  var next = null;
-  var fn = (hpush, hnext) => {
+  var queue = [];
+  var ended = false;
+
+  var fn = hpush => {
     push = hpush;
-    next = hnext;
+
+    if (queue.length > 0) {
+      while (queue.length > 0) {
+        var item = queue.shift();
+        push(null, item);
+      }
+    }
+
+    if (ended) {
+      push(null, H.nil);
+    }
   };
+  
   return {
     stream : H(fn),
-    push : x => { push(null, x); next(); },
-    end : () => { push(null, H.nil); }
+    push : x => {
+      if (push) { 
+        push(null, x);
+      } else {
+        queue.push(x);
+      }
+    },
+    end : () => { 
+      ended = true;
+      if (push)
+        push(null, H.nil); 
+    }
   };
 }
 
