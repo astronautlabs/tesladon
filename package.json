@@ -6,6 +6,9 @@
   "private": false,
   "scripts": {
     "test": "tape test/*Spec.js",
+    "tape": "tape",
+    "eslint": "eslint",
+    "tap-xunit": "tap-xunit",
     "lint": "eslint **/*.js",
     "lint-fix": "eslint --fix **/*.js"
   },
@@ -31,6 +34,7 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1",
+    "tap-xunit": "^2.4.1",
     "tape": "^4.9.0"
   },
   "bin": {
