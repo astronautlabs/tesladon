@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/astronautlabs/tesladon.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/Streampunk/tesladon)
+[![CircleCI](https://circleci.com/gh/astronautlabs/tesladon.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/astronautlabs/tesladon)
 # @/tesladon
 
 > This is Astronaut Labs' master branch of Streampunk's [tesladon](https://github.com/Streampunk/tesladon/pull/4) package which implements MPEG transport streams in Javascript.
