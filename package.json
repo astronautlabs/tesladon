@@ -1,8 +1,9 @@
 {
-  "name": "@astronautlabs/tesladon",
+  "name": "@astronautlabs/mpegts",
   "version": "0.1.1",
   "description": "MPEG transport stream library for Node.js.",
   "main": "index.js",
+  "types": "types/index.d.ts",
   "private": false,
   "scripts": {
     "test": "tape test/*Spec.js",
