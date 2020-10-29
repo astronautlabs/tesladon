@@ -24,7 +24,7 @@ function bufferGroup (g) {
       let remainingSize = remaining.reduce((x, y) => x + y.length, 0);
       if (remainingSize + x.length >= g) {
         remaining.push(x.slice(0, g - remainingSize));
-        bufs.push(Buffer.concat(remaining, 188));
+        bufs.push(Buffer.concat(remaining, g));
         pointer = g - remainingSize;
         remaining = [];
       }
